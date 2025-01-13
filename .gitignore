@@ -56,8 +56,8 @@ package-lock.json
 *.tsbuildinfo
 
 # Environment and Secrets
-.env
-.env.*
+# .env
+# .env.*
 
 # Editor-Specific
 .vscode/
