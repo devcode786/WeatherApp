@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
-// import {API_KEY} from '@env';
+import {API_KEY} from '@env';
 
 // const API_KEY=`45dc6281f938afab5f291854b289c8ae`
 // console.log(API_KEY)
