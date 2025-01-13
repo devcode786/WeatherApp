@@ -59,6 +59,7 @@ const HomeScreen: React.FC = () => {
   const fetchCurrentLocationWeather = async () => {
     const metric = await AsyncStorage.getItem('unit');
     setUnit(metric || 'Metric');
+    console.log("METER : ",metric)
 
     const result = await request(
       Platform.OS === 'ios'
@@ -71,6 +72,7 @@ const HomeScreen: React.FC = () => {
         async position => {
           const {latitude, longitude} = position.coords;
           try {
+            console.log("COORDINATES : ", latitude, longitude)
             const data = await getWeatherByCoords(latitude, longitude);
             setWeather(data);
             setError('');
@@ -162,7 +164,7 @@ const HomeScreen: React.FC = () => {
         />
         <TouchableOpacity
           onPress={() => fetchWeather()}
-          style={{position: 'absolute', width: 67, marginLeft: '78%', top: 7}}>
+          style={{position: 'absolute', marginLeft: '78%', top: 7}}>
           <Text
             style={{
               backgroundColor: '#FFB200',

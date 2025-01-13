@@ -33,8 +33,6 @@ local.properties
 !debug.keystore
 lint/intermediates/
 lint/generated/
-gradlew
-gradlew.bat
 
 # node.js
 node_modules/
